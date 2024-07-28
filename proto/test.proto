@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package testOneProto;
+
+service testOneService {
+  rpc test (TestRequest) returns (TestResponse);
+}
+
+message TestRequest {
+  string app = 1;
+  string query = 2;
+  string eventId = 3;
+  string manager = 4;
+}
+
+message TestResponse {
+  int32 code = 1;
+  string message = 2;
+  string data = 3;
+}
